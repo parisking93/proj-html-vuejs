@@ -15,7 +15,7 @@
         <section class="trusted">
           <h2>title</h2>
           <!-- v-for 3  -->
-          <Card/>
+          <!-- <Card/> -->
         </section>
         <section>
           <!-- diverso -->

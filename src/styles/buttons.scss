@@ -1,0 +1,33 @@
+@mixin buttonColor ($color,$backgroundColor,$borderColor: #000) {
+    color : $color;
+    background-color: $backgroundColor;
+    border: 1px solid $borderColor;
+    cursor : pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: lighten($backgroundColor,30%);
+    }
+
+}
+@mixin buttonColorInverse ($color,$backgroundColor,$borderColor: #000) {
+    color : $color;
+    background-color: lighten($backgroundColor,30%);
+    border: 1px solid $borderColor;
+    cursor : pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: $backgroundColor;
+    }
+
+}
+@mixin buttonColorDarken ($color,$backgroundColor,$borderColor: #000) {
+    color : $color;
+    background-color: $backgroundColor;
+    border: 1px solid $borderColor;
+    cursor : pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: darken($backgroundColor,30%);
+    }
+
+}
