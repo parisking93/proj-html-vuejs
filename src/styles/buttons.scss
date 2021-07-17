@@ -4,8 +4,23 @@
     border: 1px solid $borderColor;
     cursor : pointer;
     transition: all 0.3s ease;
+    border-radius: 0.3rem;
+    text-transform: capitalize;
     &:hover {
         background-color: lighten($backgroundColor,30%);
+    }
+
+}
+@mixin buttonColorTrasparent ($color,$backgroundColor,$borderColor: #000) {
+    color : $color;
+    background-color: lighten($backgroundColor,30%);
+    border: 1px solid $borderColor;
+    cursor : pointer;
+    transition: all 0.3s ease;
+    border-radius: 0.3rem;
+    text-transform: capitalize;
+    &:hover {
+        background-color: transparent;
     }
 
 }
@@ -15,17 +30,22 @@
     border: 1px solid $borderColor;
     cursor : pointer;
     transition: all 0.3s ease;
+    border-radius: 0.3rem;
+    text-transform: capitalize;
     &:hover {
         background-color: $backgroundColor;
     }
 
 }
+
 @mixin buttonColorDarken ($color,$backgroundColor,$borderColor: #000) {
     color : $color;
     background-color: $backgroundColor;
     border: 1px solid $borderColor;
     cursor : pointer;
     transition: all 0.3s ease;
+    border-radius: 0.3rem;
+    text-transform: capitalize;
     &:hover {
         background-color: darken($backgroundColor,30%);
     }

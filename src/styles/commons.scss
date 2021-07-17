@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "DM Sans"
+
+}
+.container {
+    max-width: 1170px;
+    margin: auto;
 }
 ul {
     list-style: none;
@@ -11,4 +17,13 @@ a {
 }
 $padding-small : 0.5rem 1.2rem;
 $padding-medium : 0.7rem 1.8rem;
-$margin03 : 0.3rem;
+$padding-big : 0.9rem 2.1rem;
+
+$margin-3 : 0.3rem;
+
+
+
+$font-size-1 :1rem ;
+$font-size-2 :1.1rem ;
+$font-size-1 :1.2rem ;
+$font-size-1 :1.5rem ;

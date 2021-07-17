@@ -1,8 +1,7 @@
 <template>
   <div>
-      <!-- section da 1 a 4 penso v-for  -->
-        <!-- v-if numero section -->
-        <section>
+        <section class="jumbo">
+          <SectionTxtImg/>
             <!-- componente cardtesto
             componente cardimg -->
         </section>
@@ -38,11 +37,21 @@
 </template>
 
 <script>
+import SectionTxtImg from '@/components/SectionTxtImg.vue'
 export default {
-    name: 'Main'
+    name: 'Main',
+    components :{
+      SectionTxtImg
+    }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .jumbo {
+    background-image: url('../assets/marketing-intro.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 5rem  2rem;
+  }
 
 </style>
