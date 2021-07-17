@@ -2,11 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans"
-
+    font-family: "DM Sans";
 }
 .container {
-    max-width: 1170px;
+    max-width: 1330px;
     margin: auto;
 }
 ul {
@@ -20,10 +19,17 @@ $padding-medium : 0.7rem 1.8rem;
 $padding-big : 0.9rem 2.1rem;
 
 $margin-3 : 0.3rem;
+$margin-6 : 0.6rem;
+$margin-9 : 0.9rem;
 
 
+$margin-upDown-small : 0.5rem 0;
+$margin-upDown-medium : 1rem 0;
+$margin-upDown-big : 1.4rem 0;
 
+$font-size-05 :0.5rem ;
+$font-size-08 :0.8rem ;
 $font-size-1 :1rem ;
 $font-size-2 :1.1rem ;
-$font-size-1 :1.2rem ;
-$font-size-1 :1.5rem ;
+$font-size-3 :1.4rem ;
+$font-size-4 :1.7rem ;

@@ -1,0 +1,6 @@
+@mixin inputStandard($paddingUpDown,$borderRadius : 2%,$width: auto,$borderColor : #e3e4e2){
+    width: $width;
+    padding: $paddingUpDown;
+    border : 1px solid $borderColor;
+    border-radius : $borderRadius;
+};

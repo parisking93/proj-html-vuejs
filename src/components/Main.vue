@@ -1,7 +1,7 @@
 <template>
   <div>
-        <section class="jumbo">
-          <SectionTxtImg/>
+        <section class="jumbo section100">
+          <SectionJumbo/>
             <!-- componente cardtesto
             componente cardimg -->
         </section>
@@ -37,11 +37,11 @@
 </template>
 
 <script>
-import SectionTxtImg from '@/components/SectionTxtImg.vue'
+import SectionJumbo from '@/components/SectionJumbo.vue'
 export default {
     name: 'Main',
     components :{
-      SectionTxtImg
+      SectionJumbo
     }
 }
 </script>
@@ -51,7 +51,7 @@ export default {
     background-image: url('../assets/marketing-intro.jpg');
     background-position: center;
     background-size: cover;
-    padding: 5rem  2rem;
+    padding-top:110px;
   }
 
 </style>

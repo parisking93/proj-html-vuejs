@@ -47,7 +47,8 @@
     border-radius: 0.3rem;
     text-transform: capitalize;
     &:hover {
-        background-color: darken($backgroundColor,30%);
+        background-color: darken($backgroundColor,5%);
+        border: 1px solid  darken($backgroundColor,5%);
     }
 
 }

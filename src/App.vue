@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header class="header"/>
     <Main/>
     <Footer/>
   </div>
@@ -23,14 +23,18 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '@/styles/variabilesColors.scss';
+  @import '@/styles/flex.scss';
   @import '@/styles/commons.scss';
+  @import '@/styles/buttons.scss';
+  @import '@/styles/commonsClass.scss';
 
 #app {
-  // font-family: Avenir, Helvetica, Arial, sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
-  // color: #2c3e50;
-  // margin-top: 60px;
+  // .header {
+  //     position: fixed;
+  //     top: 0;
+  //     background-color: $white;
+  //     width: 100%;
+  // }
 }
 </style>
