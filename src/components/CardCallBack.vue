@@ -39,11 +39,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '@/styles/commons.scss';
-  @import '@/styles/variabilesColors.scss';
+//   @import '@/styles/commons.scss';
+//   @import '@/styles/variabilesColors.scss';
   @import '@/styles/flex.scss';
   @import '@/styles/buttons.scss';
-  @import '@/styles/commonsClass.scss';
+//   @import '@/styles/commonsClass.scss';
   @import '@/styles/input.scss';
 
     .card {
@@ -64,7 +64,6 @@ export default {
         }
         .box-phone {
             color: $orangeLight;
-
             margin: 1.2rem;
         }
         p {
