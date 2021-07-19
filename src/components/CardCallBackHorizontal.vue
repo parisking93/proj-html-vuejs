@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-box-left">
           <div class="card-box-img">
-              <img src="../assets/callUser.jpg" alt="marketing consultant">
+              <img  src="../assets/marketing-expert-cta.png" alt="marketing consultant">
           </div>
           <div class="card-box-left-text">
             <h4>Sandy Reiff</h4>

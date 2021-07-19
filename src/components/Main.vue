@@ -20,12 +20,24 @@
         </section>
         <!-- fine 3 section uguali -->
 
-        <section class="section100 padding-section">
+        <section class="padding-section">
           <SectionBrand/>
           <!-- <Card/> -->
         </section>
-        <section>
-          <!-- diverso -->
+        <section class="trusted">
+          <div class="container">
+            <h2 class="text-align-center title-section">Trusted by Leading Organisations</h2>
+            <div class="row">
+              <div class="col padding-col" v-for="element,index in advantagesArr" :key="index">
+                <CardPhotoCol :elementArr="[element, index]"/>
+                <div class="box-score">
+                  <h2>{{element.attributeScore}}</h2>
+                  <span>{{element.description}}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <!--componente cardtesto -->
         <!-- componente cardimg --> 
         </section>
@@ -46,9 +58,13 @@
 
 <script>
 import {consultation} from '../consultationArr';
+import {advantages} from '../advantagesArr';
+
 import SectionJumbo from '@/components/SectionJumbo.vue';
 import CardConsultation from '@/components/CardConsultation.vue';
 import SectionBrand from '@/components/SectionBrand.vue';
+import CardPhotoCol from '@/components/CardPhotoCol.vue';
+
 
 
 
@@ -57,15 +73,18 @@ export default {
     components :{
       SectionJumbo,
       CardConsultation,
-      SectionBrand
+      SectionBrand,
+      CardPhotoCol
     },
     data() {
       return {
         consulArr : '',
+        advantagesArr : ''
       }
     },
     created() {
       this.consulArr = consultation;
+      this.advantagesArr = advantages;
     }
   }
 </script>
@@ -85,4 +104,18 @@ export default {
     height: 100%;
     align-items: center;
   }
+  // per sezione trusted
+  .title-section {
+    padding: $padding-upDown-huge;
+  }
+  .padding-col {
+    padding: 1rem;
+  }
+  .col {
+    width: calc(100% / 3);
+  }
+  .box-score {
+    border-top: 1px dashed $greyLight;
+  }
+  // fine sezione trusted
 </style>

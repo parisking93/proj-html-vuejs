@@ -1,5 +1,5 @@
 <template>
-  <div class="container container-brand">
+  <div class="container container-brand h-100">
         <h2>some brands we work with</h2>
         <p>Quisque aliquet, libero consequat elementum convallis.</p>
         <div class="box-brand padding-updown-content w-100">
@@ -32,7 +32,6 @@ export default {
     @import '@/styles/flex.scss';
     @import '@/styles/buttons.scss';
     .container-brand {
-        height: 100%;
         @include flex-column-center;       
         .box-brand {
         @include flex-space-center;

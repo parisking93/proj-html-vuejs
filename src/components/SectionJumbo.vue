@@ -1,5 +1,5 @@
 <template>
-  <div class="container jumbotron padding-section">
+  <div class="container jumbotron">
       <div class="box-text-jumbo">
             <h1>Unlock Your Online Growth Potential</h1>
             <p>
@@ -33,6 +33,7 @@ export default {
     @import '@/styles/buttons.scss';
     .jumbotron {
         @include flex-space;
+        padding: 6rem 2rem;
         .box-text-jumbo {
 
             color: $white;
@@ -51,8 +52,6 @@ export default {
             button {
                 @include buttonColorTrasparent($dark,$white,$white);
                 padding: $padding-big;
-                margin: $margin-upDown-big;
-                font-size: $font-size-2;
                 margin: $margin-upDown-big;
                 font-size: $font-size-2;
                 &:hover {

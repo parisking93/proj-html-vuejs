@@ -5,20 +5,36 @@
   min-height: 780px;
 }
 .padding-section {
-  padding: 6rem  2rem;
+  padding: 5rem 2rem;
 }
 // fine section 
 
 
 //easy class
-.padding-updown-content {
-  padding: 3rem 0;
-}
+
 .w-100 {
   width: 100%;
 }
 .h-100 {
   height: 100%;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.row {
+  display: flex;
+  .col {
+    flex-grow: 1;
+  }
+}
+.padding-updown-content {
+  padding: 3rem 0;
+}
+.text-align-center {
+  text-align: center;
 }
 .last {
     margin-left: 1.6rem;
@@ -26,6 +42,8 @@
 .phone{
   margin-right: 0.3rem;
 }
+
+
 // easy class
 
 
