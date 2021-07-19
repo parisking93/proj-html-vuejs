@@ -4,10 +4,17 @@
     box-sizing: border-box;
     font-family: "DM Sans";
 }
-
+// padding mix 
 $padding-small : 0.5rem 1.2rem;
 $padding-medium : 0.9rem 2.2rem;
 $padding-big : 1.2rem 2.8rem;
+$padding-mini-huge : 3rem;
+// fine padding mix 
+// padding same 
+$padding-same : 1rem;
+$padding-same-medium : 1.4rem;
+$padding-same-big : 2rem;
+$padding-same-mini-huge : 3rem;
 
 $padding-upDown-small : 0.5rem 0;
 $padding-upDown-medium : 1rem 0;
@@ -22,6 +29,10 @@ $margin-9 : 0.9rem;
 $margin-upDown-small : 0.5rem 0;
 $margin-upDown-medium : 1rem 0;
 $margin-upDown-big : 1.4rem 0;
+$margin-upDown-mini-huge : 3rem 0;
+$margin-upDown-huge : 4rem 0;
+
+
 
 $margin-rightLeft-small :0 0.5rem ;
 $margin-rightLeft-medium:0 1rem ;
@@ -32,7 +43,7 @@ $font-size-05 :0.5rem ;
 $font-size-08 :0.8rem ;
 $font-size-1 :1rem ;
 $font-size-2 :1.1rem ;
-$font-size-3 :1.2rem ;
+$font-size-3 :1.3rem ;
 $font-size-4  :1.5rem;
 $font-size-5 :1.8rem ;
 

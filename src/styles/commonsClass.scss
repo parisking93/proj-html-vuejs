@@ -7,11 +7,13 @@
 .padding-section {
   padding: 5rem 2rem;
 }
+.padding-inside-section {
+  padding:5rem 0;
+}
 // fine section 
 
 
 //easy class
-
 .w-100 {
   width: 100%;
 }
@@ -42,8 +44,6 @@
 .phone{
   margin-right: 0.3rem;
 }
-
-
 // easy class
 
 
@@ -83,6 +83,6 @@
   width: 50%;
   text-align: center;
   .box-image-inside{
-    width: 85%;
+    width: 90%;
   }
 }

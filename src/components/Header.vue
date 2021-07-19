@@ -91,6 +91,7 @@ export default {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index:100; 
     background-color: $white;
     nav {
       @include flex-space-center;

@@ -22,9 +22,8 @@
 
         <section class="padding-section">
           <SectionBrand/>
-          <!-- <Card/> -->
         </section>
-        <section class="trusted">
+        <section class="trusted padding-section">
           <div class="container">
             <h2 class="text-align-center title-section">Trusted by Leading Organisations</h2>
             <div class="row">
@@ -36,14 +35,29 @@
                 </div>
               </div>
             </div>
-
+            <div class="box-button">
+              <button class="button-orange">read more case studies</button>
+            </div>
           </div>
-          <!--componente cardtesto -->
-        <!-- componente cardimg --> 
+        </section >
+        <section class='padding-section'>
+          <div class="container container-boost">
+            <div class="box-text">
+              <div class="box-text-inside">
+                <h2>We Boost Our Clients’ Bottom Line by Optimizing Their Growth Potential.</h2>
+                <p>Quisque aliquet, libero consequat elementum convallis, erat risus imperdiet pellentesque sem neque eget.</p>
+                <button class="button-orange">why work  with us</button>
+              </div>
+            </div>
+            <div class="box-image">
+              <img src="@/assets/we-boost-our-clients.jpg" class="box-image-inside">
+            </div>
+          </div>
+          <div class="container padding-inside-section">
+            <Property/>
+          </div>
+          
         </section>
-        <section>
-          <!-- award -->
-      </section>
         <section>
           <!-- opposto footer up -->
         <!-- componente cardimg --> 
@@ -57,13 +71,15 @@
 </template>
 
 <script>
-import {consultation} from '../consultationArr';
-import {advantages} from '../advantagesArr';
+import {consultation} from '../arrayJs/consultationArr';
+import {advantages} from '../arrayJs/advantagesArr';
 
 import SectionJumbo from '@/components/SectionJumbo.vue';
 import CardConsultation from '@/components/CardConsultation.vue';
 import SectionBrand from '@/components/SectionBrand.vue';
 import CardPhotoCol from '@/components/CardPhotoCol.vue';
+import Property from '@/components/Property.vue';
+
 
 
 
@@ -74,7 +90,8 @@ export default {
       SectionJumbo,
       CardConsultation,
       SectionBrand,
-      CardPhotoCol
+      CardPhotoCol,
+      Property
     },
     data() {
       return {
@@ -106,7 +123,7 @@ export default {
   }
   // per sezione trusted
   .title-section {
-    padding: $padding-upDown-huge;
+    padding-bottom: 4rem;
   }
   .padding-col {
     padding: 1rem;
@@ -117,5 +134,19 @@ export default {
   .box-score {
     border-top: 1px dashed $greyLight;
   }
+  .box-button {
+    @include flex-center;
+    padding: $margin-upDown-mini-huge;
+    button {
+      font-size: $font-size-2;
+    }
+  }
   // fine sezione trusted
+  .container-boost {
+    @include flex-align-center;
+    button {
+      font-size: $font-size-2;
+
+    }
+  }
 </style>
