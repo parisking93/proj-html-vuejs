@@ -113,10 +113,10 @@ export default {
         }
       }
       button {
-        @include buttonColorInverse($orangeDark,$orangeLight,lighten($orangeLight,30%));
+        @include buttonColorInverse($orangeDark,$orangeLight,lighten($orangeLight,40%));
         
         font-size: $font-size-2;
-        padding: $padding-big;
+        padding: $padding-medium;
         &:hover {
           color: $white;
         }

@@ -1,8 +1,10 @@
+
 export const consultation = [
     {
     icon:{
         iconImage : 'icon',
-        icontext : 'business grow'
+        icontext : 'business grow',
+        color : '#223bcb'
     },
     title : 'increase brand awareness',
     textCard : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate impedit pariatur quam eius, repellendus aliquid nisi veniam optio fugiat error ratione, officia recusandae cum ipsum voluptatibus quidem minus distinctio repudiandae?'
@@ -10,7 +12,8 @@ export const consultation = [
     {
     icon:{
         iconImage : 'icon',
-        icontext : 'investors in people'
+        icontext : 'investors in people',
+        color : '#efd43f'
     },
     title : 'in-house sales training',
     textCard : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate impedit pariatur quam eius, repellendus aliquid nisi veniam optio fugiat error ratione, officia recusandae cum ipsum voluptatibus quidem minus distinctio repudiandae?'
@@ -18,7 +21,9 @@ export const consultation = [
     {
     icon:{
         iconImage : 'icon',
-        icontext : 'social media analysis'
+        icontext : 'social media analysis',
+        color :'#38c3a0'
+
     },
     title : 'harness your social proof',
     textCard : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate impedit pariatur quam eius, repellendus aliquid nisi veniam optio fugiat error ratione, officia recusandae cum ipsum voluptatibus quidem minus distinctio repudiandae?'

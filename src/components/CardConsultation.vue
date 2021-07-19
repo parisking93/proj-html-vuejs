@@ -2,12 +2,14 @@
   <div class="box-text">
     <div class="box-text-inside">
         <div>
-            <div>
-                <span></span>
+            <div class="box-icon-all">
+                <div class="box-icon box-icon-in" :style="'background-color : ' + oggettoConsul.icon.color">
+                    <i></i>
+                </div>
+                <span class="icon-description">
+                    {{oggettoConsul.icon.icontext}}
+                </span>
             </div>
-            <span class="icon-description">
-                {{oggettoConsul.icon.icontext}}
-            </span>
             </div>
             <h2>{{oggettoConsul.title}}</h2>
             <p>{{oggettoConsul.textCard}}</p>
@@ -26,5 +28,9 @@ export default {
 <style lang="scss" scoped>
     @import '@/styles/flex.scss';
     @import '@/styles/buttons.scss';
+
+    button {
+        font-size: $font-size-2;
+    }
 
 </style>

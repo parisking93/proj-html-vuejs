@@ -2,19 +2,33 @@
 // section 
 .section100 {
   height: 100vh;
-  min-height: 730px;
+  min-height: 780px;
 }
 .padding-section {
   padding: 6rem  2rem;
 }
 // fine section 
 
+
+//easy class
+.padding-updown-content {
+  padding: 3rem 0;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
 .last {
     margin-left: 1.6rem;
 }
 .phone{
   margin-right: 0.3rem;
 }
+// easy class
+
+
 .box-card {
   width: 50%;
   .card {
@@ -28,24 +42,25 @@
   .box-text-inside {
     width: 75%;
     margin: auto;
-    .icon-description {
-      font-weight: bold;
-      font-size: $font-size-3;
-      text-transform: capitalize;
+    .box-icon-all {
+      display: flex;
+      align-items: center;
     }
-    h2 {
-      font-size: 3rem;
-      text-transform: capitalize;
-    }
-    p {
-      margin : $margin-upDown-big;
-      font-size: 1.6rem;
-      letter-spacing: -1px;
-    }
-
   }
 }
-
+.box-icon {
+  width: 40px;
+  height: 40px;
+  @include flex-center-center;
+  border-radius: 50%;
+}
+.icon-description {
+  font-weight: bold;
+  font-size: $font-size-3;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+  margin: 0 1rem;
+}
 .box-image {
   width: 50%;
   text-align: center;

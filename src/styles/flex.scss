@@ -3,13 +3,31 @@
     justify-content: space-between;
     align-items: center;
 }
+@mixin flex-space-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 @mixin flex-space {
     display: flex;
     justify-content: space-between;
 }
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
 @mixin flex-column {
     display: flex;
     flex-direction: column;
+}
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 @mixin flex-center-center {
     display: flex;

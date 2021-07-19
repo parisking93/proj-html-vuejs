@@ -11,18 +11,17 @@
             </div>
             <CardConsultation :oggettoConsul="section"/>
           </div>
-          <div class="container" v-else>
+          <div class="container container-consultation" v-else>
             <CardConsultation :oggettoConsul="section"/>
-            <div class="box-img">
-              <img :src="require('@/assets/svg/img'+ (index + 1) +'.svg')" :alt="section.icon.icontext">
+            <div class="box-image">
+              <img class="box-image-inside" :src="require('@/assets/svg/img'+ (index + 1) +'.svg')" :alt="section.icon.icontext">
             </div>
           </div>
         </section>
         <!-- fine 3 section uguali -->
 
-        <section class="trusted">
-          <h2>title</h2>
-          <!-- v-for 3  -->
+        <section class="section100 padding-section">
+          <SectionBrand/>
           <!-- <Card/> -->
         </section>
         <section>
@@ -49,13 +48,16 @@
 import {consultation} from '../consultationArr';
 import SectionJumbo from '@/components/SectionJumbo.vue';
 import CardConsultation from '@/components/CardConsultation.vue';
+import SectionBrand from '@/components/SectionBrand.vue';
+
 
 
 export default {
     name: 'Main',
     components :{
       SectionJumbo,
-      CardConsultation
+      CardConsultation,
+      SectionBrand
     },
     data() {
       return {
@@ -78,11 +80,9 @@ export default {
     background-size: cover;
     padding-top:110px;
   }
-  .container {
-    display: flex;
-    align-items: center;
-  }
   .container-consultation {
+    display: flex;
     height: 100%;
+    align-items: center;
   }
 </style>

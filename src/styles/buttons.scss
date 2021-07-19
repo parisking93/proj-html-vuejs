@@ -36,7 +36,7 @@
 }
 @mixin buttonColorInverse ($color,$backgroundColor,$borderColor: #000) {
     color : $color;
-    background-color: lighten($backgroundColor,30%);
+    background-color: lighten($backgroundColor,40%);
     border: 1px solid $borderColor;
     cursor : pointer;
     transition: all 0.3s ease;

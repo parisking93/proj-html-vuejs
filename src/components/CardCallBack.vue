@@ -1,10 +1,10 @@
 <template>
   <div class="card">
-        <div class="box-image">
+        <div class="card-box-img">
             <img src="../assets/callUser.jpg" alt="marketing consultant">
         </div>
-        <h2>Richard Madsen</h2>
-        <p>Marketing Consultant Expert</p>
+        <h3 class="card-title">Richard Madsen</h3>
+        <span class="card-subtitle">Marketing Consultant Expert</span>
         <div class="box-phone"> 
             <i class ='phone' :class="phoneIcon"></i>
             <span>{{phoneNumber}}</span>
@@ -15,7 +15,7 @@
             <input type="text" placeholder=" Your Phone Number*">
             <button>get a callback</button>
         </form>
-        <span class="footer-card">By submitting my data I agree to be contacted</span>
+        <span class="card-footer">By submitting my data I agree to be contacted</span>
 </div>
 </template>
 
@@ -49,29 +49,32 @@ export default {
     .card {
 
         background-color: $white;
-        font-size: $font-size-2;
         border-radius : 20px;
         padding: 1.6rem;
         text-align: center;
-        .box-image {
+        font-size: $font-size-3;
+
+        .card-box-img {
+
             img{
                 border-radius: 50%;
                 width: 80px;
             }
         }
-        h2 {
+        .card-title {
             margin: $margin-upDown-medium;
+            font-size: $font-size-4;
         }
         .box-phone {
             color: $orangeLight;
             margin: 1.2rem;
         }
-        p {
+        .card-subtitle {
             margin: 0.5rem 0;
             color: $greyDark;
         }
         input {
-            @include inputStandard($padding-big,8px,100%);
+            @include inputStandard($padding-medium,8px,100%);
             font-size: $font-size-2;
             margin: 0.7rem 0;
             &:hover {
@@ -84,14 +87,14 @@ export default {
         }
         button {
             @include buttonColorDarken($white,$orangeLight,$orangeLight);
-            padding :$padding-big;
+            padding :$padding-medium;
             width: 100%;
             font-size: $font-size-2;
             margin: 0.5rem 0;
 
 
         }
-        .footer-card {
+        .card-footer{
             color: $greyDark;
             font-size: $font-size-08;
         };
