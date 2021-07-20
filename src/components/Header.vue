@@ -30,41 +30,16 @@
 <script>
 import "@fontsource/dm-sans";
 import { bus } from '../main.js';
+import {links} from '../arrayJs/headerArr.js'
 export default {
     name: 'Header',
     data() {
       return {
-        linkNav : [{
-          name : 'home',
-          linkActive : 'link-active'
-        },
-        {
-          name : 'services',
-          linkActive : ''
-        },
-        {
-          name: 'why us',
-          linkActive : ''
-        },
-        {
-          name : 'case studies',
-          linkActive : ''
-        },
-        {
-          name : 'about',
-          linkActive : ''
-        },
-         {
-          name : 'blog',
-          linkActive : ''
-        },
-         {
-          name : '(555) 802-1234',
-          linkActive : '',
-          icon : 'fas fa-phone-alt'
-
-        }]
+        linkNav : ''
       }
+    },
+    created() {
+      this.linkNav = links;
     },
      mounted() {
       let numberPhone = this.linkNav[this.linkNav.length -1].name;
@@ -77,15 +52,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  // @import '@/styles/variabilesColors.scss';
-  // @import '@/styles/commons.scss';
-  // @import '@/styles/commonsClass.scss';
-
+ 
   @import '@/styles/flex.scss';
   @import '@/styles/buttons.scss';
-
-
- 
 
   header {
     position: fixed;

@@ -261,8 +261,7 @@ export default {
         padding: $margin-rightLeft-huge ;
       }
     }
-
-
   }
+  // fine section make-thing-happen
 
 </style>

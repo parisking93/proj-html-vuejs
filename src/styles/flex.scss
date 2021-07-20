@@ -12,6 +12,10 @@
     display: flex;
     justify-content: space-between;
 }
+@mixin flex-evenly {
+    display: flex;
+    justify-content: space-evenly; 
+}
 @mixin flex-center {
     display: flex;
     justify-content: center;
