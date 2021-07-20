@@ -29,7 +29,7 @@
             <h2 class="text-align-center title-section">Trusted by Leading Organisations</h2>
             <div class="row">
               <div class="col padding-col" v-for="element,index in advantagesArr" :key="index">
-                <CardPhotoCol :elementArr="[element, index]"/>
+                <CardPhotoCol :elementArr="element"/>
                 <div class="box-score">
                   <h2>{{element.attributeScore}}</h2>
                   <span>{{element.description}}</span>
@@ -83,7 +83,20 @@
           </div>
           
         </section>
-        <section>
+        <section class="section-resources padding-section">
+          <div class="container container-resources">
+            <div class="box-text">
+              <h2 >Marketing Resources: Insider Advice on How to Increase Online Sales</h2>
+            </div>
+            <div class="box-text box-resources">
+              <button class="button-orange">explore all resources</button>
+            </div>
+          </div>
+          <div class="container container-resources padding-inside-section-top">
+            <div class="col padding-col" v-for="element,index in resourceArr" :key="index">
+              <CardPhotoCol :elementArr="element"/>
+            </div>
+          </div>
           <!-- opposto footer up -->
         <!-- componente cardimg --> 
         <!--componente cardtesto -->
@@ -99,6 +112,8 @@
 import {consultation} from '../arrayJs/consultationArr';
 import {advantages} from '../arrayJs/advantagesArr';
 import {awarelist} from '../arrayJs/awareArr.js'
+import {resources} from '../arrayJs/rsourcesArr.js'
+
 
 import SectionJumbo from '@/components/SectionJumbo.vue';
 import CardConsultation from '@/components/CardConsultation.vue';
@@ -126,7 +141,8 @@ export default {
       return {
         consulArr : '',
         advantagesArr : '',
-        awaresArr : ''
+        awaresArr : '',
+        risourceArr : ''
 
       }
     },
@@ -134,6 +150,7 @@ export default {
       this.consulArr = consultation;
       this.advantagesArr = advantages;
       this.awaresArr = awarelist;
+      this.resourceArr = resources;
     }
   }
 </script>
@@ -176,7 +193,7 @@ export default {
   // fine sezione trusted
   //container boost
   .section-boost {
-    background-color: $whiteDark;
+    background: linear-gradient(to bottom,rgba($color: $whiteDark, $alpha: 0.8), transparent );
     .container-boost {
       @include flex-align-center;
       button {
@@ -205,6 +222,23 @@ export default {
     }
 
   }
-
   // fine container boos
+  // section resources 
+  .section-resources {
+    background-color: $whiteDark;
+    .container-resources {
+      display: flex;
+      .box-resources {
+        @include flex-fine;
+
+        button {
+          font-size: $font-size-2;
+          margin: $margin-9;
+          align-content: flex-end;
+
+        }
+      }
+
+    }
+  }
 </style>

@@ -2,9 +2,9 @@
 <div>
   <div class="relative">
     <div class="absolute layover w-100 h-100"></div>
-    <img class="h-100 w-100" :src="require('../assets/imgAdvantages/case-studies-'+ (elementArr[1] + 1)+ '.jpg')" :alt="'consulent-' + elementArr[1]">
+    <img class="h-100 w-100" :src="require('../assets/' + elementArr.img)" :alt="'consulent-' + elementArr.name">
   </div>
-  <h3>{{elementArr[0].title}}</h3>
+  <h3>{{elementArr.title}}</h3>
 </div>
 </template>
 <script>

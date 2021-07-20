@@ -44,4 +44,9 @@
     justify-content: center;
     align-items: center; 
 }
+@mixin flex-fine {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
 
