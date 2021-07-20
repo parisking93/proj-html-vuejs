@@ -97,12 +97,23 @@
               <CardPhotoCol :elementArr="element"/>
             </div>
           </div>
-          <!-- opposto footer up -->
-        <!-- componente cardimg --> 
-        <!--componente cardtesto -->
         </section>
-        <section class="trusted small">
-
+        <section class="section-make-thing-happen padding-section section100">
+          <div class="container container-section-make-thing-happen">
+            <div class="box-text box-end-main">
+              <h1>Let’s Make Things Happen</h1>
+              <p class="p-bigger">Curabitur ac leo nunc. Vestibulum et mauris vel ante finibus maximus nec ut leo. Integer consectetur.</p>
+              <div class="line"></div>
+              <p class="cursive">“The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year growth due to their progressive approach.”</p>
+              <div class="box-name-writer">
+                <h4>Kate Schadler</h4>
+                <span>Marketing Consultant – Abstract</span>
+              </div>
+            </div>
+            <div class="box-card box-card-make-thing-happen">
+              <CardCallBack class="card"/>
+            </div>
+          </div>
         </section>
         
   </div>
@@ -121,6 +132,8 @@ import SectionBrand from '@/components/SectionBrand.vue';
 import CardPhotoCol from '@/components/CardPhotoCol.vue';
 import Property from '@/components/Property.vue';
 import CardAware from '@/components/CardAware.vue';
+import CardCallBack from '@/components/CardCallBack.vue';
+
 
 
 
@@ -135,7 +148,8 @@ export default {
       SectionBrand,
       CardPhotoCol,
       Property,
-      CardAware
+      CardAware,
+      CardCallBack
     },
     data() {
       return {
@@ -205,17 +219,6 @@ export default {
       width: 80%;
       margin: $margin-upDown-medium;
       }
-      .box-name-writer {
-        padding: $padding-upDown-big;
-
-        h4 {
-          font-size: $font-size-3;
-          margin: $margin-upDown-small;
-        }
-        span {
-          font-size: $font-size-08;
-        }
-      }
     }
     .aware-title {
       font-size: $font-size-5;
@@ -241,4 +244,25 @@ export default {
 
     }
   }
+  // fine section resources 
+  // inizio section section-make-thing-happen
+  .section-make-thing-happen{
+    background-color: $dark;
+    color: $white;
+    .container-section-make-thing-happen {
+      @include flex-align-center;
+      .box-end-main {
+        padding: $margin-rightLeft-huge;
+        p {
+          padding: $padding-upDown-small;
+          }
+      }
+      .box-card-make-thing-happen{
+        padding: $margin-rightLeft-huge ;
+      }
+    }
+
+
+  }
+
 </style>

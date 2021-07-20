@@ -1,4 +1,4 @@
-
+@import '@/styles/commons.scss';
 // section 
 .section100 {
   height: 100vh;
@@ -53,6 +53,9 @@
 .text-align-center {
   text-align: center;
 }
+.cursive {
+  font-style: italic;
+}
 .last {
     margin-left: 1.6rem;
 }
@@ -63,6 +66,15 @@
   border-radius: 2%;
 }
 // easy class
+
+
+
+
+
+.p-bigger {
+  font-size: 1.8rem;
+
+}
 
 
 .box-card {
@@ -103,4 +115,20 @@
   .box-image-inside{
     width: 90%;
   }
+}
+.box-name-writer {
+  padding: $padding-upDown-big;
+
+  h4 {
+    font-size: $font-size-3;
+    margin: $margin-upDown-small;
+  }
+  span {
+    font-size: $font-size-08;
+  }
+}
+.line{
+  background-color: white;
+  height: 1px;
+  width: 100px;
 }

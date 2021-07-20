@@ -2,8 +2,8 @@
   <div class="container jumbotron">
       <div class="box-text-jumbo">
             <h1>Unlock Your Online Growth Potential</h1>
-            <p>
-            Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.
+            <p class="p-bigger">
+                Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.
             </p>
             <button>
               our services
@@ -36,17 +36,7 @@ export default {
 
             color: $white;
             width: 50%;
-            h1 {
-                font-size: 4.6rem;
-                word-spacing: -5px;
-                letter-spacing: -2px;
-                line-height: 4.8rem;
-            }
-            p {
-                margin : $margin-upDown-big;
-                font-size: 1.8rem;
-                letter-spacing: -1px;
-            }
+
             button {
                 @include buttonColorTrasparent($dark,$white,$white);
                 padding: $padding-big;
