@@ -4,12 +4,13 @@
         <li>
             <h3 class="relative">
                 <a href="">{{utility.title}}</a>
-                <div class="absolute"></div>
+                <div class="orange-line absolute"></div>
             </h3>
+            <div></div>
         </li>
         <li class="relative" v-for="link,number in utility.links" :key="number">
               <a href="">{{link}}</a>
-              <div class="absolute"></div>
+              <div class="orange-line absolute"></div>
         </li>
       </ul>
   </div>
@@ -45,7 +46,7 @@ export default {
                     color: $dark;
                     transition: all 0.3s ease;
                 }
-                div {
+                .orange-line {
                     top :100%;
                     left: 100%;
                     width: 2px;

@@ -5,12 +5,13 @@
           <img src="@/assets/logo.png" alt="marketing">
         </a>
         <ul>
-          <li v-for="links, index in linkNav" :key="index">
+          <li class="relative" v-for="links, index in linkNav" :key="index">
             <template v-if="index < 2">
               <a href="#" :class="links.linkActive">
                 {{links.name}}
                 <i class="fas fa-chevron-down"></i>
               </a>
+              <DropDown class="absolute drop-down-box" :sublink ='links.dropDownLink' :show ='open'/>
             </template>
             <template v-else-if="index == linkNav.length - 1">
               <a class="last" :class="links.linkActive" href="#" >
@@ -31,11 +32,16 @@
 import "@fontsource/dm-sans";
 import { bus } from '../main.js';
 import {links} from '../arrayJs/headerArr.js'
+import DropDown from '@/components/DropDown.vue'
 export default {
     name: 'Header',
+    components : {
+      DropDown
+    },
     data() {
       return {
-        linkNav : ''
+        linkNav : '',
+        open : 'up'
       }
     },
     created() {
@@ -45,6 +51,11 @@ export default {
       let numberPhone = this.linkNav[this.linkNav.length -1].name;
       let iconPhone = this.linkNav[this.linkNav.length -1].icon
       bus.$emit('sending', numberPhone, iconPhone);
+    },
+    methods : {
+      showDropDown() {
+        this.open = 'down';
+      }
     }
 
 }
@@ -79,6 +90,14 @@ export default {
             border-bottom: 2px solid $orangeLight;
             transition: all 0.3s ease;
           }
+
+
+        }
+        &:hover .drop-down-box{
+          display: block;
+        }
+        .drop-down-box {
+          display: none;
 
         }
       }
