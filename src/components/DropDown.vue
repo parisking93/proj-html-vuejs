@@ -40,7 +40,7 @@ export default {
     @import '@/styles/flex.scss';
     @import '@/styles/buttons.scss';
     .drop-down {
-        bottom: 0;
+        bottom: -20px;
         left : 0;
         background: $white;
         transform: translate(0,100%);
@@ -52,6 +52,8 @@ export default {
             display: flex;
             .drop-down-list {
                 width: 20vw;
+                min-width: 220px;
+                max-width: 300px;
                 .box-icon-nav {
                     margin: $margin-upDown-small;
                 }
@@ -66,16 +68,5 @@ export default {
             }
         }
     }
-    .up {
-        display: none;
-    }
-    .down {
-        animation: open 1s linear 1;
-    }
-    @keyframes open {
-      0% {transform: translate(0,150%); }
-      100% {transform: translate(0,100%); }
-    }
-
 
 </style>

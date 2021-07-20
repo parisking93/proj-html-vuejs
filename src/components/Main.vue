@@ -88,8 +88,8 @@
             <div class="box-text">
               <h2 >Marketing Resources: Insider Advice on How to Increase Online Sales</h2>
             </div>
-            <div class="box-text box-resources">
-              <button class="button-orange">explore all resources</button>
+            <div class="box-text box-resources relative">
+              <button class="button-orange absolute">explore all resources</button>
             </div>
           </div>
           <div class="container container-resources padding-inside-section-top">
@@ -232,12 +232,12 @@ export default {
     .container-resources {
       display: flex;
       .box-resources {
-        @include flex-fine;
 
         button {
           font-size: $font-size-2;
           margin: $margin-9;
-          align-content: flex-end;
+          right: 0;
+          bottom: 0;
 
         }
       }
