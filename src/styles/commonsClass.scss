@@ -10,6 +10,12 @@
 .padding-inside-section {
   padding:5rem 0;
 }
+.padding-inside-section-top {
+  padding-top:5rem
+}
+.padding-inside-section-bottom {
+  padding-bottom:5rem;
+}
 // fine section 
 
 
@@ -52,6 +58,9 @@
 }
 .phone{
   margin-right: 0.3rem;
+}
+.border-r {
+  border-radius: 2%;
 }
 // easy class
 

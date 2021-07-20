@@ -42,7 +42,7 @@
           </div>
         </section >
 
-        <section class='padding-section'>
+        <section class='padding-section section-boost'>
           <div class="container container-boost">
             <div class="box-text">
               <div class="box-text-inside">
@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="box-image">
-              <img src="@/assets/we-boost-our-clients.jpg" class="box-image-inside">
+              <img src="@/assets/we-boost-our-clients.jpg" class="box-image-inside border-r">
             </div>
           </div>
           <div class="container padding-inside-section">
@@ -64,6 +64,21 @@
               <div class="col m-1" v-for="aware, index in awaresArr" :key="index">
                 <CardAware :trophy="aware"/>
               </div>
+            </div>
+          </div>
+          <div class="container container-boost padding-inside-section-top">
+            <div class="box-image">
+              <img src="@/assets/large-testimonial.jpg" class="box-image-inside border-r">
+            </div>
+            <div class="box-text">
+              <div class="box-text-inside">
+                <h3 class="paragraph">“The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year growth due to their progressive approach.”</h3>
+                <div class="box-name-writer">
+                  <h4>Kate Schadler</h4>
+                  <span>Marketing Consultant – Abstract</span>
+                </div>
+              </div>
+
             </div>
           </div>
           
@@ -153,22 +168,43 @@ export default {
   }
   .box-button {
     @include flex-center;
-    padding: $margin-upDown-mini-huge;
+    padding-top: $padding-same-mini-huge;
     button {
       font-size: $font-size-2;
     }
   }
   // fine sezione trusted
   //container boost
-  .container-boost {
-    @include flex-align-center;
-    button {
-      font-size: $font-size-2;
+  .section-boost {
+    background-color: $whiteDark;
+    .container-boost {
+      @include flex-align-center;
+      button {
+        font-size: $font-size-2;
 
+      }
+      .paragraph {
+      font-size: $font-size-5;
+      width: 80%;
+      margin: $margin-upDown-medium;
+      }
+      .box-name-writer {
+        padding: $padding-upDown-big;
+
+        h4 {
+          font-size: $font-size-3;
+          margin: $margin-upDown-small;
+        }
+        span {
+          font-size: $font-size-08;
+        }
+      }
     }
+    .aware-title {
+      font-size: $font-size-5;
+    }
+
   }
-  .aware-title {
-    font-size: $font-size-5;
-  }
+
   // fine container boos
 </style>
