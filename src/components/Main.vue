@@ -23,6 +23,7 @@
         <section class="padding-section">
           <SectionBrand/>
         </section>
+
         <section class="trusted padding-section">
           <div class="container">
             <h2 class="text-align-center title-section">Trusted by Leading Organisations</h2>
@@ -40,6 +41,7 @@
             </div>
           </div>
         </section >
+
         <section class='padding-section'>
           <div class="container container-boost">
             <div class="box-text">
@@ -55,6 +57,14 @@
           </div>
           <div class="container padding-inside-section">
             <Property/>
+          </div>
+          <div class="container">
+            <h3 class="aware-title w-100 text-align-center">Aware</h3>
+            <div class="row">
+              <div class="col m-1" v-for="aware, index in awaresArr" :key="index">
+                <CardAware :trophy="aware"/>
+              </div>
+            </div>
           </div>
           
         </section>
@@ -73,12 +83,15 @@
 <script>
 import {consultation} from '../arrayJs/consultationArr';
 import {advantages} from '../arrayJs/advantagesArr';
+import {awarelist} from '../arrayJs/awareArr.js'
 
 import SectionJumbo from '@/components/SectionJumbo.vue';
 import CardConsultation from '@/components/CardConsultation.vue';
 import SectionBrand from '@/components/SectionBrand.vue';
 import CardPhotoCol from '@/components/CardPhotoCol.vue';
 import Property from '@/components/Property.vue';
+import CardAware from '@/components/CardAware.vue';
+
 
 
 
@@ -91,17 +104,21 @@ export default {
       CardConsultation,
       SectionBrand,
       CardPhotoCol,
-      Property
+      Property,
+      CardAware
     },
     data() {
       return {
         consulArr : '',
-        advantagesArr : ''
+        advantagesArr : '',
+        awaresArr : ''
+
       }
     },
     created() {
       this.consulArr = consultation;
       this.advantagesArr = advantages;
+      this.awaresArr = awarelist;
     }
   }
 </script>
@@ -142,6 +159,7 @@ export default {
     }
   }
   // fine sezione trusted
+  //container boost
   .container-boost {
     @include flex-align-center;
     button {
@@ -149,4 +167,8 @@ export default {
 
     }
   }
+  .aware-title {
+    font-size: $font-size-5;
+  }
+  // fine container boos
 </style>
