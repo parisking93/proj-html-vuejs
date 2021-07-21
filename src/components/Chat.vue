@@ -81,6 +81,12 @@ export default {
         border-radius: 50%;
         @include flex-center-center;
         cursor: pointer;
+        box-shadow: 0px 24px 32px -6px rgba(0,0,0,0.1);
+
+
+        &:active {
+            box-shadow: 0px 24px 32px -6px rgba(0,0,0,0.1) inset;
+        }
 
         .color-icon {
             color: $white;
