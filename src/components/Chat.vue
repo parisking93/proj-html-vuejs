@@ -81,6 +81,7 @@ export default {
         border-radius: 50%;
         @include flex-center-center;
         cursor: pointer;
+
         .color-icon {
             color: $white;
         }
@@ -90,6 +91,7 @@ export default {
             left: 0;
             transform:translate(-100%,-90%);
             overflow: hidden;
+            box-shadow: 0px 24px 32px -6px rgba(0,0,0,0.1);
             .header-chat {
                 @include flex-space;
                 color: $white;
