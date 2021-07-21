@@ -1,25 +1,25 @@
 <template>
-    <div class="box-chat">
+    <div @click.stop="openChat" id="box-chat">
         <div class="relative">
             <div class="box-img-chat font-center">
-                <i class="color-icon fas fa-comments"></i>
+                <i id="chat-icon" class="color-icon fas fa-comments"></i>
             </div>
-            <div class="chat-window absolute border-r">
+            <div class="chat-window absolute border-r" :style="'display : ' + displayChat">
                 <header class="header-chat">
                     <div class="box-ichat">
                         <i class="fas fa-comments"></i>
                     </div>
-                    <h5 class=" title-chat">Live Chat</h5>
+                    <h5 class="title-chat">Live Chat</h5>
                     <div class="box-for-close">
                         <i class="min-chat fas fa-minus"></i>
-                        <i class="chiudi fas fa-times"></i>
+                        <i @click.stop="closeIt" class="chiudi fas fa-times"></i>
                     </div>
                 </header>
                 <div class="box-text-chat w-100">
                         <label for="email" class="description-chat">Email</label>
-                        <input id="email" type="text" placeholder="Inserisci la tua email">
+                        <input id="email" type="text" placeholder="Inserisci la tua email" v-model="textInput">
                         <label for="text-area-chat">Come posso aiutarti?</label>
-                        <textarea id="text-area-chat" name="email" cols="33" rows="7" placeholder="Inserisci il tuo Messaggio...." required></textarea>
+                        <textarea v-model="textArea" id="text-area-chat" name="email" cols="33" rows="7" placeholder="Inserisci il tuo Messaggio...." required></textarea>
                 </div>
                 <div class="box-button">
                      <button class="button-orange-small">Start Chat</button>
@@ -31,7 +31,36 @@
 
 <script>
 export default {
-    name : 'Chat'
+    name : 'Chat',
+    data(){
+        return {
+            displayChat : 'none',
+            textInput : '',
+            textArea : ''
+        }
+    }, methods : {
+        openChat(event) {
+            console.log(event.target.tagName);
+            if(this.displayChat == 'block' && (event.target.id == "box-chat" || event.target.id == "chat-icon" || event.target.className == "box-img-chat font-center")) {
+                this.displayChat = 'none';
+            } else {
+                this.displayChat = 'block'
+            }
+            if(event.target.tagName == 'BUTTON') {
+                if(this.textInput &&  this.textArea) {
+                    this.textInput = '';
+                    this.textArea = '';
+                    this.displayChat = 'none';
+                    alert('grazie per aver inviato il  messaggio');
+                } else {
+                    alert('devi riempire tutti i campi');
+                }
+            }
+        },
+        closeIt() {
+            this.displayChat = 'none';
+        }
+    }
 }
 </script>
 
@@ -40,7 +69,7 @@ export default {
     @import '@/styles/buttons.scss';
     @import '@/styles/input.scss';
 
-    .box-chat {
+    #box-chat {
         height: 60px;
         width: 60px;
         position: fixed;
@@ -61,7 +90,6 @@ export default {
             left: 0;
             transform:translate(-100%,-90%);
             overflow: hidden;
-            display: none;
             .header-chat {
                 @include flex-space;
                 color: $white;
