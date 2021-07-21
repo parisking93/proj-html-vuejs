@@ -11,7 +11,7 @@
                 {{links.name}}
                 <i class="fas fa-chevron-down"></i>
               </a>
-              <DropDown class="absolute drop-down-box" :sublink ='links.dropDownLink' :show ='open'/>
+              <DropDown class="absolute drop-down-box" :sublink ='links.dropDownLink'/>
             </template>
             <template v-else-if="index == linkNav.length - 1">
               <a class="last" :class="links.linkActive" href="#" >
@@ -41,7 +41,6 @@ export default {
     data() {
       return {
         linkNav : '',
-        open : 'up'
       }
     },
     created() {
@@ -52,12 +51,6 @@ export default {
       let iconPhone = this.linkNav[this.linkNav.length -1].icon
       bus.$emit('sending', numberPhone, iconPhone);
     },
-    methods : {
-      showDropDown() {
-        this.open = 'down';
-      }
-    }
-
 }
 
 </script>

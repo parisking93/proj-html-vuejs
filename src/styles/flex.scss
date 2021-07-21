@@ -53,3 +53,7 @@
     justify-content: end;
     align-items: end;
 }
+@mixin flex-to-end {
+    display: flex;
+    justify-content: end;
+}

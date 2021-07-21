@@ -4,7 +4,7 @@
         <div>
             <div class="box-icon-all">
                 <div class="box-icon box-icon-in" :style="'background-color : ' + oggettoConsul.icon.color">
-                    <i></i>
+                    <i :class="oggettoConsul.icon.iconImage"></i>
                 </div>
                 <span class="icon-description">
                     {{oggettoConsul.icon.icontext}}

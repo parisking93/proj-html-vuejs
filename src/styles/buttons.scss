@@ -70,3 +70,7 @@
     @include  buttonColorDarken($white,$orangeLight,$orangeLight);
     padding: $padding-medium;
 }
+.button-orange-small {
+    @include  buttonColorDarken($white,$orangeLight,$orangeLight);
+    padding: $padding-small;
+}

@@ -16,7 +16,7 @@ export const links = [
         linkActive : '',
         dropDownLink : [
             {
-                iconColor : "#223bcb",
+                iconColor : "#5a6fe6",
                 icon : 'fas fa-balance-scale',
                 title : 'Strategic Marketing Plan',
                 text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum architecto quod iste exercitationem recusandae aperiam dolore perferendis commodi blanditiis quidem!'

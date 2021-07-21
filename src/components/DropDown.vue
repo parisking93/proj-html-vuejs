@@ -40,15 +40,17 @@ export default {
     @import '@/styles/flex.scss';
     @import '@/styles/buttons.scss';
     .drop-down {
-        bottom: -20px;
+        bottom: -10px;
         left : 0;
-        background: $white;
         transform: translate(0,100%);
         border-radius: 10px;
+        overflow: hidden;
         box-shadow: 0px 24px 32px -6px rgba(0,0,0,0.1);
         .sub-drop-down {
             padding: $padding-same-medium;
             display: flex;
+            background: $white;
+
             .drop-down-list {
                 width: 20vw;
                 min-width: 220px;

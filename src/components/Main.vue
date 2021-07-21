@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden" id="main-page">
-        <section class="jumbo section100">
+        <section class="jumbo section-jumbo">
           <SectionJumbo/>
         </section>
         <!-- 3 sezioni uguali  -->
