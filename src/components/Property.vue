@@ -1,14 +1,14 @@
 <template>
   <div  class="card-property">
       <div class="box-text box-property">
-        <div class="box-text-inside box-property-inside" v-for="element,index in whatWeDoList" :key="index"> 
+        <div class="box-text-inside box-property-inside" v-for="element,index in whatWeDoList" :key="index" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="900"> 
           <h3>{{element.title}}</h3>
           <span>{{element.span}}</span>
         </div>
       </div>
     <div class="box-text">
         <ul class="box-text-inside">
-          <li v-for="element,index in propertyList" :key="index">
+          <li v-for="element,index in propertyList" :key="index" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">
               <div class="box-icon-proprety">
                   <i :class="element.icon"></i>
               </div>
@@ -32,7 +32,7 @@ export default {
         return {    
             
             whatWeDoList : '',
-            propertyList : ''
+            propertyList : '',
         }
     },
     created(){
@@ -40,6 +40,7 @@ export default {
         this.propertyList = listProperty;
 
     }
+
 
 }
 </script>

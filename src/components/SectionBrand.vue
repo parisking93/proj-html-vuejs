@@ -1,7 +1,7 @@
 <template>
   <div class="container container-brand h-100">
-        <h2>some brands we work with</h2>
-        <p>Quisque aliquet, libero consequat elementum convallis.</p>
+        <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">some brands we work with</h2>
+        <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">Quisque aliquet, libero consequat elementum convallis.</p>
         <div class="box-brand padding-updown-content w-100">
             <div class="box-brand-in" v-for="brand,index in brandsArray" :key="index">
                 <img  :src="require('@/assets/brands/' + brand + '.png')" :alt="brand">

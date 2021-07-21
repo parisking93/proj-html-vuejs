@@ -1,6 +1,6 @@
 <template>
   <header>
-      <nav class="container">
+      <nav class="container" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1500" data-aos-easing="ease-in-out">
         <a href="#" id="box-logo">
           <img src="@/assets/logo.png" alt="marketing">
         </a>

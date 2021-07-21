@@ -1,6 +1,6 @@
 <template>
   <div class="container jumbotron">
-      <div class="box-text-jumbo">
+      <div class="box-text-jumbo" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300" data-aos-easing="ease-in-out">
             <h1>Unlock Your Online Growth Potential</h1>
             <p class="p-bigger">
                 Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.

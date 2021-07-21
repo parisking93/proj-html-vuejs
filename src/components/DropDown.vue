@@ -44,7 +44,6 @@ export default {
         left : 0;
         background: $white;
         transform: translate(0,100%);
-        opacity: 1;
         border-radius: 10px;
         box-shadow: 0px 24px 32px -6px rgba(0,0,0,0.1);
         .sub-drop-down {

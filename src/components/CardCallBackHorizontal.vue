@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card">
+    <div class="card" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" >
       <div class="card-box-left">
           <div class="card-box-img">
               <img  src="../assets/marketing-expert-cta.png" alt="marketing consultant">
