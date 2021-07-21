@@ -21,8 +21,8 @@
                         <label for="text-area-chat">Come posso aiutarti?</label>
                         <textarea v-model="textArea" id="text-area-chat" name="email" cols="33" rows="7" placeholder="Inserisci il tuo Messaggio...." required></textarea>
                 </div>
-                <div class="box-button">
-                     <button class="button-orange-small">Start Chat</button>
+                <div class="box-button relative">
+                     <button class="button-orange-small absolute">Start Chat</button>
                 </div>
             </div>
         </div>
@@ -82,8 +82,6 @@ export default {
         @include flex-center-center;
         cursor: pointer;
         box-shadow: 0px 24px 32px -6px rgba(0,0,0,0.1);
-
-
         &:active {
             box-shadow: 0px 24px 32px -6px rgba(0,0,0,0.1) inset;
         }
@@ -130,8 +128,14 @@ export default {
             }
         }
         .box-button {
-            @include flex-to-end;
+            height: 40px;
+            width: 100%;
             padding: $padding-same;
+            button {
+                right: 1rem;
+                top: 50%;
+                transform:translate(0,-80%)
+            }
         }
 
 
